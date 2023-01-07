@@ -14,6 +14,25 @@ This is Zoom clone coding repository.
 
 <br />
 
+### 사전 지식
+
+- Express
+- Pug
+- app.get()
+- (req,res)
+- MVP CSS
+
+<br/>
+
+### 서버 설정(server.js)
+
+- Pug로 view Engine 설정
+- Express에 template이 어디 있는지 지정
+- public url을 생성해서 유저에게 파일을 공유
+- home.pug를 render 해주는 route handler 를 만듬
+  
+<br/>
+
 ### 결과물 
 
 ----
