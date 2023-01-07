@@ -20,6 +20,8 @@ This is Zoom clone coding repository.
 - Pug
 - app.get()
 - (req,res)
+- Nodemon : 프로젝트를 살펴보고 변경사항이 있을 시 서버를 재시작해주는 프로그램
+- Babel : 작성한 코드를 일반 Node.js 코드로 컴파일 
 - MVP CSS
 
 <br/>
