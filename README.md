@@ -25,6 +25,7 @@ This is Zoom clone coding repository.
 - MVP CSS
 - Socket.io => WebSocket의 부가기능이 아닌 WebSocket도 활용하여 다양한 프로토콜을 이용한 실시간 클라이언트 서비스 구현을 도와주는 프레임워크 혹은 라이브러리이다. => 즉, 단순 WebSocket의 확장이 아님
   - 또한 Socket.io를 이용하면 기존의 소켓통신을 더욱 간편하게 할 수 있고, 굉장히 탄력적이여서 WebSocket 연결이 끊어지더라도 연결을 유지하는 다른 대안책도 존재한다.
+  - 프론트(브라우저)와 백엔드 모두에서 설치(추가)해야 한다.
     <br/>
 
 ### 서버 설정(server.js)
