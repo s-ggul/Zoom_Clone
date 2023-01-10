@@ -1,3 +1,4 @@
+/* -----------------------기존 Vanilla JS에서의 WebSocket 이용 방식-----------------------
 const messageList = document.querySelector("ul");
 const messageForm = document.querySelector("#message");
 const nickForm = document.querySelector("#nick");
@@ -48,3 +49,30 @@ function handleNickSubmit(event) {
 
 messageForm.addEventListener("submit", handleSubmit);
 nickForm.addEventListener("submit", handleNickSubmit);
+
+*/
+
+// --------------------------------------------------------------
+
+const socket = io();
+// 백엔드와 연결 설정
+// socket.io 를 사용하는 서버를 알아서 찾음 => 잘 이해는 안되지만 일단 그렇게 알자
+const welcome = document.getElementById("welcome");
+const form = welcome.querySelector("form");
+
+function handleRoomSubmit(event) {
+  event.preventDefault();
+  const input = document.querySelector("input");
+  socket.emit("enter_room", { payload: input.value }, () => {
+    console.log("server is done");
+  });
+  // emit은 이벤트 등록이다. => 이름 맘대로 설정 가능
+  // 이전 처럼 String이 아닌 JSON 객체로 보낼 수 있다. => Socket.io 제공 기능
+  // 3번째 인자로는 서버에서 호출하는 function(콜백) 이 들어간다.
+  // 즉, 서버에서 실행할 수 있는 함수를 전달할 수 있는 것이다.
+  // 이때 서버에서 해당 funciton을 호출하게되면 해당 function은 frontend에서 실행되고 프론트에서 결과가 나온다.
+  // 증말 으메이징
+  input.value = "";
+}
+
+form.addEventListener("submit", handleRoomSubmit);
