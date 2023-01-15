@@ -8,23 +8,15 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/mvp.css@1.12/mvp.css")
     body 
         header
-            h1 It Works!
+            h1 Noom
 
         main
-            div#welcome
-                form 
-                    input(placeholder="room name", required, type="text")
-                    button Enter Room
-                h4 Open Rooms :
-                ul
-            div#room
-                h3
-                ul 
-                form#name
-                    input(placeholder="nickname", required, type="text")
-                    button Save
-                form#msg
-                    input(placeholder="message", required, type="text")
-                    button Send
+            div#myStream
+                video#myFace(autoplay,playsinline, width="400", height="400")
+                // playsinline은 모바일 브라우저 환경에서 필요한 프로퍼티이다. 
+                // 가끔 모바일 기기로 비디오를 재생할때 전체화면이 되어버려서 그 부분을 막기위해서 넣어준다.
+                button#mute Mute
+                button#camera Turn Camera Off
+                select#cameras
         script(src="/socket.io/socket.io.js")    
         script(src="/public/js/app.js")
