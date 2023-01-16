@@ -37,6 +37,12 @@ This is Zoom clone coding repository.
 
 <br/>
 
+<span align="center">
+
+![](./diagram.PNG)
+
+</span>
+
 ### 결과물
 
 ---
@@ -45,8 +51,26 @@ This is Zoom clone coding repository.
 
 ---
 
-#### 구현 기능 
+#### 구현 기능
 
-- 
+- ***
+
+#### 번외
+
+- 외부 모바일에서도 접속할 수 있도록 해보기
+
+1. npm i localtunnel => 내 서버를 전세계와 공유할 수 있게 해줌 => 항시 무료가 아님 일시적 무료임
+2. npm i -g localtunnel
+
+3. lt --port 3000
+
+---
+
+#### 번외 2
+
+- 문제가 생김 내 컴퓨터랑 폰이 같은 wifi에 있지 않으면 에러가 발생함
+- STUN 서버라는 것이 필요하다
+- STUN서버는 컴퓨터가 공용 IP를 찾게 해준다.
+- 즉 서로 다른 네트워크를 사용하고 싶다면 STUN서버를 통해 공용 IP를 얻어야함
 
 ---
